@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Liminal</title>
+		<title>Entrant Technologies</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,254 +27,8 @@
 			a {
 				color: #f00;
 			}
-			
-			.annotation-marker{
-				position: absolute;
-			    	border-radius: 50%;
-			    	cursor: pointer;
-			    	padding: 0;
-			    	margin: 0;
-			    	border: 2px solid #dddc;
-			    	background: #00000061;
-			    	padding: 1px 9px;
-			    	transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-				opacity:0;
-			}
-			
-			.annotation-marker span{
-				font-size: 13px;
-				font-weight: 600;
-				color: white;
-			}
 
-			#annotation-description{
-				position: absolute;
-			    bottom: 0;
-			    left: 0;
-			    width: 100vw;
-			    background: #7b82ea75;
-			    height: 0;
-			    padding: 16px;
-			    color: #ffffff;
-			    font-size: 1.15rem;
-			    backdrop-filter: blur(12px);
-			    opacity:0;
-			}
-
-			#splash{
-				position: fixed;
-				width:1vw;
-				height:1vw;
-				transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
-				border-radius: 50%;
-				top:50%;
-				left:50%;
-				background: #7683eb;
-				z-index:500;
-			}
-
-			
-			#loadingtext {
-			  position: absolute;
-			    z-index: 600;
-			    color: white;
-			    left: 0%;
-			    transform: translate(-50%) !important;
-			    top: 47%;
-			    text-transform: uppercase;
-			    font: 1000 4em/1 "Nunito", sans-serif;
-			    letter-spacing: 6px;
-			    filter: drop-shadow(2px 4px 6px #333) brightness(1.2);
-			    /* font-weight: 800; */
-			    padding: 0.25em 0 0.325em;
-			    display: block;
-			    margin: 0 auto;
-			    text-shadow: 0 0 80px rgb(255 255 255 / 50%);
-			    background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y;
-			    -webkit-background-clip: text;
-			    background-clip: text;
-			    -webkit-text-fill-color: transparent;
-			    -webkit-animation: aitf 80s linear infinite;
-			    -webkit-transform: translate3d(0, 0, 0);
-			    -webkit-backface-visibility: hidden;
-			     transition: opacity 0.3s ease-in-out;
-			     opacity:0;
-			}
-
-			
-			@-webkit-keyframes aitf {
-			  0% {
-			    background-position: 0% 50%;
-			  }
-			  100% {
-			    background-position: 100% 50%;
-			  }
-			}
-
-			.frame {
-			  position: absolute;
-			  top: 35%;
-			  left: 50%;
-			  width: 400px;
-			  height: 400px;
-			  margin-top: -200px;
-			  margin-left: -200px;
-			  border-radius: 2px;
-			  z-index:600;
-			  color: #fff;
-			  opacity:0;
-			  transition: opacity 0.9s ease-in-out;
-			}
-
-			.center {
-			  position: absolute;
-			  width: 220px;
-			  height: 220px;
-			  top: 90px;
-			  left: 90px;
-			  transform: scale(1.1);
-    			  opacity: 0.9;
-			}
-			
-
-			.dot-1 {
-			  position: absolute;
-			  z-index: 3;
-			  width: 30px;
-			  height: 30px;
-			  top: 95px;
-			  left: 95px;
-			  background: #f16441;
-			  border-radius: 50%;
-			  -webkit-animation-fill-mode: both;
-				  animation-fill-mode: both;
-			  -webkit-animation: jump-jump-1 2s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
-				  animation: jump-jump-1 2s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
-			}
-
-			.dot-2 {
-			  position: absolute;
-			  z-index: 2;
-			  width: 60px;
-			  height: 60px;
-			  top: 80px;
-			  left: 80px;
-			  background: #fe683c17;
-			  border-radius: 50%;
-			  -webkit-animation-fill-mode: both;
-				  animation-fill-mode: both;
-			  -webkit-animation: jump-jump-2 2s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
-				  animation: jump-jump-2 2s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
-			}
-
-			.dot-3 {
-			  position: absolute;
-			  z-index: 1;
-			  width: 90px;
-			  height: 90px;
-			  top: 65px;
-			  left: 65px;
-			  background: #fff;
-			  border-radius: 50%;
-			  -webkit-animation-fill-mode: both;
-				  animation-fill-mode: both;
-			  -webkit-animation: jump-jump-3 2s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
-				  animation: jump-jump-3 2s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
-			}
-
-			@-webkit-keyframes jump-jump-1 {
-			  0%, 70% {
-			    box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
-			    -webkit-transform: scale(0);
-				    transform: scale(0);
-			  }
-			  100% {
-			    box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
-			    -webkit-transform: scale(1);
-				    transform: scale(1);
-			  }
-			}
-
-			@keyframes jump-jump-1 {
-			  0%, 70% {
-			    box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
-			    -webkit-transform: scale(0);
-				    transform: scale(0);
-			  }
-			  100% {
-			    box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
-			    -webkit-transform: scale(1);
-				    transform: scale(1);
-			  }
-			}
-			@-webkit-keyframes jump-jump-2 {
-			  0%, 40% {
-			    box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
-			    -webkit-transform: scale(0);
-				    transform: scale(0);
-			  }
-			  100% {
-			    box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
-			    -webkit-transform: scale(1);
-				    transform: scale(1);
-			  }
-			}
-			@keyframes jump-jump-2 {
-			  0%, 40% {
-			    box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
-			    -webkit-transform: scale(0);
-				    transform: scale(0);
-			  }
-			  100% {
-			    box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
-			    -webkit-transform: scale(1);
-				    transform: scale(1);
-			  }
-			}
-			@-webkit-keyframes jump-jump-3 {
-			  0%, 10% {
-			    box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
-			    -webkit-transform: scale(0);
-				    transform: scale(0);
-			  }
-			  100% {
-			    box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
-			    -webkit-transform: scale(1);
-				    transform: scale(1);
-			  }
-			}
-			@keyframes jump-jump-3 {
-			  0%, 10% {
-			    box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
-			    -webkit-transform: scale(0);
-				    transform: scale(0);
-			  }
-			  100% {
-			    box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
-			    -webkit-transform: scale(1);
-				    transform: scale(1);
-			  }
-			}
-			
-			#ar-cta{
-			    background: white;
-			    /* border: none; */
-			    text-transform: capitalize;
-			    padding: 0.4rem 1rem;
-			    border-radius: 8rem;
-			    background: #f7f7f7;
-			    top: 16px;
-			    right: 16px;
-			    position: absolute;
-			    color: #7683eb;
-			    font-family: inherit;
-			    font-size: 0.9rem;
-			    border: 2px solid #7683eb;
-			    outline: none;
-			    font-weight: bold;
-			    box-shadow: 0px 5px 16px 1px rgb(118 131 235 / 46%);
-			}
-
+		
 
 			
 		</style>
@@ -284,43 +38,8 @@
 	</head>
 
 	<body>
-		<div id="splash"></div>
-		<p id="loadingtext">Liminal</p>
-
-		<div id="round-loader" class="frame">
-		   <div class="center">
-		      <div class="dot-1"></div>
-		      <div class="dot-2"></div>
-		      <div class="dot-3"></div>
-		   </div>
-		</div>
-		<a id="ar-cta" href='https://himanshu999.github.io/limi/ar.html'>View In AR</a>
-		<script>
-			setTimeout(() => {
-				const el = document.getElementById('splash');
-				el.style.transform = 'scale(280)';
-				//el.style.opacity = 1.0;
-
-				setTimeout(() => {
-					const rl = document.getElementById('round-loader');
-					rl.style.opacity = 1.0;
-
-					setTimeout(() => {
-						const lt = document.getElementById('loadingtext');
-						lt.style.opacity = 1.0;
-						lt.style.left = '50%';
-					}, 600);
-				}, 1200);
-			}, 300);			
-			
-		</script>
-		<div id="annotation-markers">
-			
-		</div>
-		<div id="annotation-description">
-			
-		</div>
-
+		
+		<input id="cantextureip" type="file" />
 
 		<script type="module">
 
@@ -334,26 +53,7 @@
 
 			let camera, controls, scene, renderer, pmremGenerator;
 
-			const annotations = [{number: 1, 
-					      desc: 'A 3HP motor is used to power this machine. The motor works really well and smooth, I believe!', 
-					      position: {x:-87, y: 20, z:19}, 
-					      camPos: {x:-165, y:47, z:42}}, 
-					{number: 2, 
-					      desc: 'This looks like a camera but it is not. Believe me.', 
-					      position: {x:-36, y:44, z:24}, 
-					      camPos: {x:-97, y:61, z:87}},
-
-					{number: 3, 
-					      desc: 'This is a very important part of the machine. I do not have any clue why. I am just trying to make this description long.', 
-					      position: {x:79, y:42, z:8}, 
-					      camPos: {x:204, y:80, z:59}}
-					];
- 
-
-			let adjustedCanvasWidth, adjustedCanvasHeight;
-			let meshPos;
-			let showAnnotations = false, annotDescHolder, isDescBoxOpen = false;
-			let mouse = {}, raycaster; 
+			let model;
 
 			init();
 			//render(); // remove when using next line for animation loop (requestAnimationFrame)
@@ -376,7 +76,7 @@
 
 
 				pmremGenerator = new THREE.PMREMGenerator( renderer );
-				//pmremGenerator.compileEquirectangularShader();
+				
 
 				scene.environment = pmremGenerator.fromScene( new RoomEnvironment(), 0.04 ).texture;
 
@@ -405,7 +105,7 @@
 
 
 				const loader = new GLTFLoader();
-				loader.load( './assets/model.glb', function ( gltf ) {
+				loader.load( './assets/can.glb', function ( gltf ) {
 
 							/*gltf.scene.traverse( function ( child ) {
 
@@ -417,50 +117,28 @@
 
 							} ); */
 							
-							gltf.scene.scale.set(90,90,90);
-							gltf.scene.position.set(0,30,0);
+							gltf.scene.scale.set(10,10,10);
+							gltf.scene.position.set(0,-30,0);
 
-							scene.add( gltf.scene );
+							
+							model = gltf.scene;
+							scene.add( model );
 
-							//roughnessMipmapper.dispose();
-
-							meshPos = scene.children[0].position;
-							hideLoadingScreen();
-							createAnnotationMarkers();
-							showAnnotations = true;
+							
+							
 
 						} );
 
 
 
 
-				// world
-
-				/*const geometry = new THREE.SphereGeometry( 50, 40, 40 );
-				const material = new THREE.MeshStandardMaterial( { color: 0xff0000, metalness: 0.5, roughness: 0.4 } );
-				const mesh = new THREE.Mesh( geometry, material );
-				scene.add( mesh );
-
-				meshPos = mesh.position; 
-
-				setTimeout(() => {
 				
-					hideLoadingScreen();
-	
-				}, 10000); */
 
-				
-				adjustedCanvasWidth = renderer.domElement.width / window.devicePixelRatio;
-				adjustedCanvasHeight = renderer.domElement.height / window.devicePixelRatio;
-
-				//createAnnotationMarkers();
-				annotDescHolder = document.getElementById('annotation-description')
-				
-				raycaster = new THREE.Raycaster();
+				//raycaster = new THREE.Raycaster();
 				
 
 				window.addEventListener( 'resize', onWindowResize );
-				window.addEventListener('pointerdown', raycast);
+				window.addEventListener('pointerdown', changeTexture);
 
 			}
 
@@ -482,7 +160,7 @@
 
 				controls.update(); 
 
-				showAnnotations && updateAnnotationMarkers();
+				
 
 				render();
 
@@ -494,142 +172,20 @@
 
 			}
 
-			function createAnnotationMarkers(){
-			
-				const holder = document.getElementById('annotation-markers');
-				
-				annotations.forEach((annot, index) => {
-				
-					holder.innerHTML += `<div data-id=${index} class="annotation-marker" onclick="handleAnnotClick(${index})"><span>${annot.number}</span><div>`;
-					annot.visible = false;
-					annot.position = new THREE.Vector3(annot.position.x, annot.position.y, annot.position.z);
-
-				});
-
-				Array.from(document.getElementsByClassName('annotation-marker')).forEach((ele, index) => {
-					annotations[ele.getAttribute('data-id')].el = ele;
-				});
-
-				console.log(annotations);
-			}
-
-			function updateAnnotationMarkers(){
-				
-
-				annotations.forEach((annot, index) => {
-
-
-					const meshDistance = camera.position.distanceTo(meshPos);
-					const spriteDistance = camera.position.distanceTo(annot.position);
-					
-					const spriteBehindObject = spriteDistance > meshDistance;
-					//console.log(spriteBehindObject && annot.visible);
-
-					if(spriteBehindObject && annot.visible){
-						//annot.el.style.opacity = 0;
-						annot.el.style.transform = 'scale(0)';
-						annot.el.style.opacity = 0;
-						annot.visible = false;
-
-					}else if(!spriteBehindObject){
-				
-						const vector = new THREE.Vector3().copy(annot.position);					
-						vector.project(camera); 
-
-
-						annot.el.style.left = Math.round((0.5 + vector.x / 2) * adjustedCanvasWidth) +'px';
-						annot.el.style.top = Math.round((0.5 - vector.y / 2) * adjustedCanvasHeight) +'px';
-						
-						
-						if(!annot.visible){
-							annot.el.style.transform = 'scale(1.0)';
-							annot.el.style.opacity = 1.0; 
-							annot.visible = true;
-						}
-
-					}
-					
-					
-					//annot.el.style.opacity = '1.0';	
-				});
-			}
 		
+			function changeTexture(textureName){
+				
+				const texture = new THREE.TextureLoader().load( './assets/tex1.jpeg' );
+				let mymodel = scene.children[0].children[0].children[0];
+				console.log(mymodel);	
+				//mymodel.material.color.set(0,0,0);			
+				mymodel.material.map = texture;
+				mymodel.material.needsUpdate = true;
+				
+			}
+
 			
-			function raycast(event){
-				
-				controls.autoRotate = false;
-				setTimeout(() => (controls.autoRotate = true), 4000);
-				
-				mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
-				mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
-
-				raycaster.setFromCamera( mouse, camera );
-
-				
-				const intersects = raycaster.intersectObjects( scene.children, true );
-
-				for ( let i = 0; i < intersects.length; i ++ ) {
-
-					//intersects[ i ].object.material.color.set( 0xff0000 );
-					console.log(intersects[0].point);
-
-				}
-
-
-			}
 			
-
-
-			function handleAnnotClick(id){
-				
-				showAnnotations = false;
-
-				annotations.forEach((annot) => {
-					annot.el.style.opacity = 0;
-					annot.el.style.transform = 'scale(0)';
-					annot.visible = false;
-				});
-				
-				gsap.to(camera.position, {...annotations[id].camPos, duration:1.8, ease: "expo.out", onComplete: () => {
-					console.log('tweening done');
-					showAnnotations = true;	
-					//controls.target.set(annotations[id].position.x, annotations[id].position.y, annotations[id].position.z );
-					//gsap.fromTo(annotDescHolder, {height:0, opacity:0}, {duration: 0.9, opacity:1.0, height: '12rem', ease: "expo.out"});			
-				}});
-
-				
-				annotDescHolder.innerText = annotations[id].desc;
-
-				if(!isDescBoxOpen) {
-					gsap.fromTo(annotDescHolder, {height:0, opacity:0}, {duration: 1, opacity:1.0, height: '10rem', ease: "expo.out"});
-					isDescBoxOpen = true;	
-				}	
-				
-			}
-
-			window.handleAnnotClick = handleAnnotClick;
-
-			function hideLoadingScreen(){
-
-				const splash = document.getElementById('splash');
-				const lt = document.getElementById('loadingtext');
-				const rl = document.getElementById('round-loader');
-
-				rl.style.opacity = 0;
-				lt.style.opacity = 0;
-				setTimeout(() => {
-					splash.style.transform = 'scale(0)';
-				
-					setTimeout(() => {
-						splash.remove();
-						rl.remove();
-						lt.remove();
-					}, 1000);
-				}, 1000);
-
-				
-				
-			}
 
 		</script>
 
