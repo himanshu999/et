@@ -195,8 +195,8 @@
 				camera.aspect = window.innerWidth / window.innerHeight;
 				camera.updateProjectionMatrix();
 
-				adjustedCanvasWidth = renderer.domElement.width / window.devicePixelRatio;
-				adjustedCanvasHeight = renderer.domElement.height / window.devicePixelRatio;
+				//const adjustedCanvasWidth = renderer.domElement.width / window.devicePixelRatio;
+				//const adjustedCanvasHeight = renderer.domElement.height / window.devicePixelRatio;
 
 				renderer.setSize( window.innerWidth, window.innerHeight );
 
@@ -302,7 +302,7 @@
 					context.fillRect(0, 0, 1024, 1024);
 
 					let configg = config.find((c) => c.name == selectedPart.name);
-					
+
 					context.drawImage(img, configg.x, configg.y, configg.w, configg.h);
 
 					const processedTextureImg = imgCanvas.toDataURL("image/jpeg");
